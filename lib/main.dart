@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
         rtv.add(_buildListTileHomeContent(context, 'Czech Rep', "CZK", "+420"));
         rtv.add(_buildListTileHomeContent(context, 'Denmark', "DKK", "+45"));
         rtv.add(_buildListTileHomeContent(
-            context, 'Dominican Republic', "DOP", "+1809"));
+            context, 'Dominican Republic', "DOP", "+1"));
         rtv.add(_buildListTileHomeContent(context, 'Estonia', "EST", "+372"));
         rtv.add(_buildListTileHomeContent(context, 'Finland', "FIN", "+358"));
         rtv.add(_buildListTileHomeContent(context, 'France', "FRA", "+33"));
@@ -231,8 +231,7 @@ class _MyHomePageState extends State<MyHomePage> {
         rtv.add(_buildListTileHomeContent(context, 'Ireland', "IRE", "+353"));
         rtv.add(_buildListTileHomeContent(context, 'Israel', "ISR", "+972"));
         rtv.add(_buildListTileHomeContent(context, 'Italy', "ITA", "+39"));
-        rtv.add(
-            _buildListTileHomeContent(context, 'Jersey', "JER", "+44 1534"));
+        rtv.add(_buildListTileHomeContent(context, 'Jersey', "JER", "+44"));
         rtv.add(_buildListTileHomeContent(context, 'Latvia', "LAT", "+371"));
         rtv.add(_buildListTileHomeContent(context, 'Lithuania', "LIT", "+370"));
         rtv.add(_buildListTileHomeContent(context, 'Mexico', "MEX", "+52"));
