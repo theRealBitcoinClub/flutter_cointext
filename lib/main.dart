@@ -161,9 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: _buildContent(),
+      body: Scrollbar(
+        child: ListView(children: _buildContent()),
       ),
     );
   }
@@ -207,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     switch (_homeState) {
       case "HOME":
-        rtv.add(Padding(padding: EdgeInsets.all(30.0)));
+        rtv.add(Padding(padding: EdgeInsets.all(10.0)));
         rtv.add(_buildListTileHomeContent(context, 'Argentina', "ARS", "+54"));
         rtv.add(_buildListTileHomeContent(context, 'Australia', "AUD", "+61"));
         rtv.add(_buildListTileHomeContent(context, 'Austria', "AUT", "+43"));
@@ -262,224 +261,227 @@ class _MyHomePageState extends State<MyHomePage> {
       case "ARS":
         rtv.add(_buildListTileHomeContent(context, 'Argentina', "HOME", "+54"));
         rtv.add(buildListTileCaption("¡Toque el número!"));
-        rtv.add(_buildListTileNumber("drawer", "+54-110-11", ""));
+        rtv.add(_buildListTileNumber("drawer", "110-11", "+54"));
         break;
       case "AUD":
-        rtv.add(_buildListTileHomeContent(context, 'Australia', "AUD", "+61"));
+        rtv.add(_buildListTileHomeContent(context, 'Australia', "HOME", "+61"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+61488811810", ""));
+        rtv.add(_buildListTileNumber("drawer", "488811810", "+61"));
         break;
       case "AUT":
-        rtv.add(_buildListTileHomeContent(context, 'Austria', "AUT", "+43"));
+        rtv.add(_buildListTileHomeContent(context, 'Austria', "HOME", "+43"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+43676800800718", ""));
+        rtv.add(_buildListTileNumber("drawer", "676800800718", "+43"));
         break;
       case "BDT":
         rtv.add(
-            _buildListTileHomeContent(context, 'Bangladesh', "BDT", "+880"));
+            _buildListTileHomeContent(context, 'Bangladesh', "HOME", "+880"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+8804445650050", ""));
+        rtv.add(_buildListTileNumber("drawer", "4445650050", "+880"));
         break;
       case "BEL":
-        rtv.add(_buildListTileHomeContent(context, 'Belgium', "BEL", "+32"));
+        rtv.add(_buildListTileHomeContent(context, 'Belgium', "HOME", "+32"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+32460225732", ""));
+        rtv.add(_buildListTileNumber("drawer", "460225732", "+32"));
         break;
       case "BRL":
-        rtv.add(_buildListTileHomeContent(context, 'Brazil', "BRL", "+55"));
+        rtv.add(_buildListTileHomeContent(context, 'Brazil', "HOME", "+55"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+29000", ""));
+        rtv.add(_buildListTileNumber("drawer", "29000", "+55"));
         break;
       case "CAD":
-        rtv.add(_buildListTileHomeContent(context, 'Canada', "CAD", "+1"));
+        rtv.add(_buildListTileHomeContent(context, 'Canada', "HOME", "+1"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+15067002100", ""));
+        rtv.add(_buildListTileNumber("drawer", "5067002100", "+1"));
         break;
       case "CLP":
-        rtv.add(_buildListTileHomeContent(context, 'Chile', "CLP", "+56"));
+        rtv.add(_buildListTileHomeContent(context, 'Chile', "HOME", "+56"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+56945950999", ""));
+        rtv.add(_buildListTileNumber("drawer", "945950999", "+56"));
         break;
       case "COP":
-        rtv.add(_buildListTileHomeContent(context, 'Colombia', "COP", "+57"));
+        rtv.add(_buildListTileHomeContent(context, 'Colombia', "HOME", "+57"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+85668", ""));
+        rtv.add(_buildListTileNumber("drawer", "85668", "+57"));
         break;
       case "HRK":
-        rtv.add(_buildListTileHomeContent(context, 'Croatia', "HRK", "+385"));
+        rtv.add(_buildListTileHomeContent(context, 'Croatia', "HOME", "+385"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+385951006707", ""));
+        rtv.add(_buildListTileNumber("drawer", "951006707", "+385"));
         break;
       case "CZK":
-        rtv.add(_buildListTileHomeContent(context, 'Czech Rep', "CZK", "+420"));
+        rtv.add(
+            _buildListTileHomeContent(context, 'Czech Rep', "HOME", "+420"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+420736350073", ""));
+        rtv.add(_buildListTileNumber("drawer", "736350073", "+420"));
         break;
       case "DKK":
-        rtv.add(_buildListTileHomeContent(context, 'Denmark', "DKK", "+45"));
+        rtv.add(_buildListTileHomeContent(context, 'Denmark', "HOME", "+45"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+4592452565", ""));
+        rtv.add(_buildListTileNumber("drawer", "92452565", "+45"));
         break;
       case "DOP":
         rtv.add(_buildListTileHomeContent(
-            context, 'Dominican Republic', "DOP", "+1809"));
+            context, 'Dominican Republic', "HOME", "+1"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+7400", ""));
+        rtv.add(_buildListTileNumber("drawer", "7400", "+1"));
         break;
       case "EST":
-        rtv.add(_buildListTileHomeContent(context, 'Estonia', "EST", "+372"));
+        rtv.add(_buildListTileHomeContent(context, 'Estonia', "HOME", "+372"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+37259120201", ""));
+        rtv.add(_buildListTileNumber("drawer", "59120201", "+372"));
         break;
       case "FIN":
-        rtv.add(_buildListTileHomeContent(context, 'Finland', "FIN", "+358"));
+        rtv.add(_buildListTileHomeContent(context, 'Finland', "HOME", "+358"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+3584573976101", ""));
+        rtv.add(_buildListTileNumber("drawer", "4573976101", "+358"));
         break;
       case "FRA":
-        rtv.add(_buildListTileHomeContent(context, 'France', "FRA", "+33"));
+        rtv.add(_buildListTileHomeContent(context, 'France', "HOME", "+33"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+38691", ""));
+        rtv.add(_buildListTileNumber("drawer", "38691", "+33"));
         break;
       case "GER":
-        rtv.add(_buildListTileHomeContent(context, 'Germany', "GER", "+49"));
+        rtv.add(_buildListTileHomeContent(context, 'Germany', "HOME", "+49"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+4915735999059", ""));
+        rtv.add(_buildListTileNumber("drawer", "15735999059", "+49"));
         break;
       case "HK":
-        rtv.add(_buildListTileHomeContent(context, 'Hong Kong', "HK", "+852"));
+        rtv.add(
+            _buildListTileHomeContent(context, 'Hong Kong', "HOME", "+852"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+85257456744", ""));
+        rtv.add(_buildListTileNumber("drawer", "57456744", "+852"));
         break;
       case "HUN":
-        rtv.add(_buildListTileHomeContent(context, 'Hungary', "HUN", "+36"));
+        rtv.add(_buildListTileHomeContent(context, 'Hungary', "HOME", "+36"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+36707178409", ""));
+        rtv.add(_buildListTileNumber("drawer", "707178409", "+36"));
         break;
       case "IRE":
-        rtv.add(_buildListTileHomeContent(context, 'Ireland', "IRE", "+353"));
+        rtv.add(_buildListTileHomeContent(context, 'Ireland', "HOME", "+353"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+353861803183", ""));
+        rtv.add(_buildListTileNumber("drawer", "861803183", "+353"));
         break;
       case "ISR":
-        rtv.add(_buildListTileHomeContent(context, 'Israel', "ISR", "+972"));
+        rtv.add(_buildListTileHomeContent(context, 'Israel', "HOME", "+972"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+972526230418", ""));
+        rtv.add(_buildListTileNumber("drawer", "526230418", "+972"));
         break;
       case "ITA":
-        rtv.add(_buildListTileHomeContent(context, 'Italy', "ITA", "+39"));
+        rtv.add(_buildListTileHomeContent(context, 'Italy', "HOME", "+39"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+393202042282", ""));
+        rtv.add(_buildListTileNumber("drawer", "3202042282", "+39"));
         break;
       case "JER":
-        rtv.add(
-            _buildListTileHomeContent(context, 'Jersey', "JER", "+44 1534"));
+        rtv.add(_buildListTileHomeContent(context, 'Jersey', "HOME", "+44"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+447937900030", ""));
+        rtv.add(_buildListTileNumber("drawer", "7937900030", "+44"));
         break;
       case "LAT":
-        rtv.add(_buildListTileHomeContent(context, 'Latvia', "LAT", "+371"));
+        rtv.add(_buildListTileHomeContent(context, 'Latvia', "HOME", "+371"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+37123230313", ""));
+        rtv.add(_buildListTileNumber("drawer", "23230313", "+371"));
         break;
       case "LIT":
-        rtv.add(_buildListTileHomeContent(context, 'Lithuania', "LIT", "+370"));
+        rtv.add(
+            _buildListTileHomeContent(context, 'Lithuania', "HOME", "+370"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+37066841321", ""));
+        rtv.add(_buildListTileNumber("drawer", "66841321", "+370"));
         break;
       case "MEX":
-        rtv.add(_buildListTileHomeContent(context, 'Mexico', "MEX", "+52"));
+        rtv.add(_buildListTileHomeContent(context, 'Mexico', "HOME", "+52"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+529993193199", ""));
+        rtv.add(_buildListTileNumber("drawer", "9993193199", "+52"));
         break;
       case "NLD":
         rtv.add(
-            _buildListTileHomeContent(context, 'Netherlands', "NLD", "+31"));
+            _buildListTileHomeContent(context, 'Netherlands', "HOME", "+31"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+3197014200771", ""));
+        rtv.add(_buildListTileNumber("drawer", "97014200771", "+31"));
         break;
       case "NOR":
-        rtv.add(_buildListTileHomeContent(context, 'Norway', "NOR", "+47"));
+        rtv.add(_buildListTileHomeContent(context, 'Norway', "HOME", "+47"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+4759445076", ""));
+        rtv.add(_buildListTileNumber("drawer", "59445076", "+47"));
         break;
       case "PHI":
         rtv.add(
-            _buildListTileHomeContent(context, 'Philippines', "PHI", "+63"));
+            _buildListTileHomeContent(context, 'Philippines', "HOME", "+63"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+639221101037", ""));
+        rtv.add(_buildListTileNumber("drawer", "9221101037", "+63"));
         break;
       case "POL":
-        rtv.add(_buildListTileHomeContent(context, 'Poland', "POL", "+48"));
+        rtv.add(_buildListTileHomeContent(context, 'Poland', "HOME", "+48"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+48539585454", ""));
+        rtv.add(_buildListTileNumber("drawer", "539585454", "+48"));
         break;
       case "POR":
-        rtv.add(_buildListTileHomeContent(context, 'Portugal', "POR", "+351"));
+        rtv.add(_buildListTileHomeContent(context, 'Portugal', "HOME", "+351"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+351927995026", ""));
+        rtv.add(_buildListTileNumber("drawer", "927995026", "+351"));
         break;
       case "PRI":
         rtv.add(
-            _buildListTileHomeContent(context, 'Puerto Rico', "PRI", "+1787"));
+            _buildListTileHomeContent(context, 'Puerto Rico', "HOME", "+1787"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+17873011087", ""));
+        rtv.add(_buildListTileNumber("drawer", "3011087", "+1787"));
         break;
       case "ROM":
-        rtv.add(_buildListTileHomeContent(context, 'Romania', "ROM", "+40"));
+        rtv.add(_buildListTileHomeContent(context, 'Romania', "HOME", "+40"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+40371700677", ""));
+        rtv.add(_buildListTileNumber("drawer", "371700677", "+40"));
         break;
       case "SLO":
-        rtv.add(_buildListTileHomeContent(context, 'Slovenia', "SLO", "+386"));
+        rtv.add(_buildListTileHomeContent(context, 'Slovenia', "HOME", "+386"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+38651300586", ""));
+        rtv.add(_buildListTileNumber("drawer", "51300586", "+386"));
         break;
       case "ZAF":
         rtv.add(
-            _buildListTileHomeContent(context, 'South Africa', "ZAF", "+27"));
+            _buildListTileHomeContent(context, 'South Africa', "HOME", "+27"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+27872406777", ""));
+        rtv.add(_buildListTileNumber("drawer", "872406777", "+27"));
         break;
       case "SPA":
-        rtv.add(_buildListTileHomeContent(context, 'Spain', "SPA", "+34"));
+        rtv.add(_buildListTileHomeContent(context, 'Spain', "HOME", "+34"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+34957870414", ""));
+        rtv.add(_buildListTileNumber("drawer", "957870414", "+34"));
         break;
       case "SWE":
-        rtv.add(_buildListTileHomeContent(context, 'Sweden', "SWE", "+46"));
+        rtv.add(_buildListTileHomeContent(context, 'Sweden', "HOME", "+46"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+46700861888", ""));
+        rtv.add(_buildListTileNumber("drawer", "700861888", "+46"));
         break;
       case "CH":
-        rtv.add(_buildListTileHomeContent(context, 'Switzerland', "CH", "+41"));
+        rtv.add(
+            _buildListTileHomeContent(context, 'Switzerland', "HOME", "+41"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+41798073741", ""));
+        rtv.add(_buildListTileNumber("drawer", "798073741", "+41"));
         break;
       case "TAI":
-        rtv.add(_buildListTileHomeContent(context, 'Taiwan', "TAI", "+886"));
+        rtv.add(_buildListTileHomeContent(context, 'Taiwan', "HOME", "+886"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+886931181297", ""));
+        rtv.add(_buildListTileNumber("drawer", "931181297", "+886"));
         break;
       case "TUR":
-        rtv.add(_buildListTileHomeContent(context, 'Turkey', "TUR", "+90"));
+        rtv.add(_buildListTileHomeContent(context, 'Turkey', "HOME", "+90"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+908505400651", ""));
+        rtv.add(_buildListTileNumber("drawer", "8505400651", "+90"));
         break;
       case "UK":
-        rtv.add(_buildListTileHomeContent(context, 'UK', "UK", "+44"));
+        rtv.add(_buildListTileHomeContent(context, 'UK', "HOME", "+44"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+447491163242", ""));
+        rtv.add(_buildListTileNumber("drawer", "7491163242", "+44"));
         break;
       case "UKR":
-        rtv.add(_buildListTileHomeContent(context, 'Ukraine', "UKR", "+380"));
+        rtv.add(_buildListTileHomeContent(context, 'Ukraine', "HOME", "+380"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+380931770157", ""));
+        rtv.add(_buildListTileNumber("drawer", "931770157", "+380"));
         break;
       case "USA":
-        rtv.add(_buildListTileHomeContent(context, 'USA', "USA", "+1"));
+        rtv.add(_buildListTileHomeContent(context, 'USA', "HOME", "+1"));
         rtv.add(buildListTileCaption("Touch the number!"));
-        rtv.add(_buildListTileNumber("drawer", "+17077776185", ""));
+        rtv.add(_buildListTileNumber("drawer", "7077776185", "+1"));
         break;
     }
 
